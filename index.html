@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dead Before Dawn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #0b0714;
+      color: #aaa;
+      font-family: "Creepster", "Trebuchet MS", cursive;
+      font-size: 20px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    h1 { color: #ff7a1a; font-family: "Nosifer", "Creepster", cursive; font-size: 34px; font-weight: normal;
+         text-shadow: 0 0 14px #ff4a00; animation: flicker 4s infinite; }
+    @keyframes flicker { 0%, 90%, 100% { opacity: 1; } 92% { opacity: 0.4; } 94% { opacity: 1; } 96% { opacity: 0.5; } }
+    canvas { border: 3px solid #ff7a1a; border-radius: 8px; transition: box-shadow 0.3s; }
+    canvas:hover { box-shadow: 0 0 35px #ff7a1a; }
+  </style>
+</head>
+<body>
+
+
+  <h1>💀 DEAD BEFORE DAWN 🎃</h1>
+
+  <!-- the game is drawn on this canvas -->
+  <canvas id="game" width="900" height="450"></canvas>
+
+  <p><b>🎃 Pumpkin (Player 1):</b> SPACE = jump &nbsp;·&nbsp; H = hide in pumpkins &nbsp;·&nbsp; T = throw Lantern Bomb</p>
+  <p><b>💀 Reaper (Player 2, two player mode):</b> ← → = move &nbsp;·&nbsp; ↑ = float (dodge bombs) &nbsp;·&nbsp; ↓ = throw scythe</p>
+  <p>R = restart &nbsp;·&nbsp; M = menu &nbsp;·&nbsp; P = pause &nbsp;·&nbsp; N = sound &nbsp;·&nbsp; Grab toffees to run faster. Survive until sunrise!</p>
+
+  <!-- load the game code -->
+  <script src="game.js"></script>
+</body>
+</html>
